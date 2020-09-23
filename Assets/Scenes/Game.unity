@@ -800,7 +800,7 @@ GameObject:
   - component: {fileID: 687270534}
   m_Layer: 0
   m_Name: DeathWall
-  m_TagString: Untagged
+  m_TagString: DeathWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1062,7 +1062,7 @@ MonoBehaviour:
   initialBrickSpawnPositionY: 3.325
   brickPrefab: {fileID: 6290962313690025975, guid: f80d0e3110c4cf0469201a6b325dba64,
     type: 3}
-  CurrentLevel: 1
+  CurrentLevel: 0
 --- !u!1 &901227458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,6 +1541,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346910058}
   m_CullTransparentMesh: 0
+--- !u!1 &1446809566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1446809567}
+  - component: {fileID: 1446809568}
+  m_Layer: 0
+  m_Name: CollectablesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1446809567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446809566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1831344134}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1446809568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446809566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d96d7c82a9c7cc449b3675b1ce35017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvailableBuffs:
+  - {fileID: 8876207802995515440, guid: 09302cf688ad791469e280de8480ad5b, type: 3}
+  AvailableDebuffs: []
+  BuffChance: 14.9
+  DebuffChance: 0
 --- !u!1 &1462641834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,7 +1712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 1854708409}
   victoryScreen: {fileID: 4278542}
-  AvailibleLives: 1
+  AvailibleLives: 3
 --- !u!1 &1667174507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,6 +1778,7 @@ Transform:
   - {fileID: 235594907}
   - {fileID: 895432708}
   - {fileID: 2000103363}
+  - {fileID: 1446809567}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1907,7 +1956,7 @@ GameObject:
   - component: {fileID: 1941906029}
   m_Layer: 0
   m_Name: Paddle
-  m_TagString: Untagged
+  m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
